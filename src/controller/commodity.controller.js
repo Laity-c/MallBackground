@@ -3,7 +3,7 @@ class  commodityService {
     async addgoods(ctx, next) {
         // 获取用户请求传递的参数
         // console.log(ctx.request.body)
-        console.log("五")
+        // console.log("五")
         const goods = ctx.request.body;
         //查询数据
         const result = await Service.addgoods(goods);
@@ -13,7 +13,7 @@ class  commodityService {
     }
 
     async detail(ctx,next){
-        console.log(111)
+        // console.log(111)
         //1.获取数据(userid)
         // console.log(ctx.params.userid)
         const userid = ctx.params.userid;

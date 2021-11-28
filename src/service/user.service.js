@@ -6,10 +6,10 @@ const connection = require("../app/database");
 class UserService {
   async create(user) {	  
     //将user存储到数据库中
-    const { name, password, phone } = user;
+    const { name, password, phone,paymentcode } = user;
 	console.log(user);
-    const statement = `INSERT INTO user (name,password,phone) VALUES (?, ?, ?);`;
-    const result = await connection.execute(statement, [name, password, phone]);
+    const statement = `INSERT INTO user (name,password,phone,paymentcode) VALUES (?, ?, ?,?);`;
+    const result = await connection.execute(statement, [name, password, phone,paymentcode]);
     return result;
   }
   async getUserByName(name) {
